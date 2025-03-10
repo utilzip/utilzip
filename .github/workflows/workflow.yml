@@ -12,11 +12,11 @@ jobs:  # 작업 정의
       - uses: action/github-script@v7
         with:
           script: |  # 스크립트 시작
-            const pull_request = context.payload.pull_request;   # pull_request 객체 가져오기
+            const pull_request = context.payload.pull_request;   // pull_request 객체 가져오기
 
-            if (pull_request === undefined) {  # pull_request가 없는 경우
-              console.log("This is not a pull request");
-              return;  // # 종료
+            if (pull_request === undefined) {  // pull_request가 없는 경우
+                console.log("This is not a pull request");
+                return;  // 종료
             }
 
             const body = pull_request.body;
@@ -26,7 +26,7 @@ jobs:  # 작업 정의
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     issue_number: pull_request.number,
-                    body: "해당 PR은 가이드라인을 준수하지 않았기 때문에 PR을 닫도록 하겠습니다. 가이드 라인을 준수해서 다시 요청해주세요!
+                    body: "해당 PR은 가이드라인을 준수하지 않았기 때문에 PR을 닫도록 하겠습니다. 가이드 라인을 준수해서 다시 요청해주세요!"
                 });
 
                  await github.rest.pulls.update({
