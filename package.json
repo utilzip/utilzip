@@ -1,0 +1,13 @@
+{
+  "name": "utilzip",
+  "version": "0.0.1",
+  "description": "간소화된 유틸리티 라이브러리",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jini",
+  "license": "MIT"
+}
