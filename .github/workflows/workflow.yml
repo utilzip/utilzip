@@ -9,7 +9,7 @@ jobs:  # 작업 정의
     permissions:   #권한 설정
       pull-requests: write  # PR에 쓰기 권한 설정
     steps:  # 작업 단계
-      - uses: action/github-script@v7
+      - uses: actions/github-script@v7
         with:
           script: |  # 스크립트 시작
             const pull_request = context.payload.pull_request;   // pull_request 객체 가져오기
